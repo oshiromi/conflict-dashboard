@@ -1,7 +1,10 @@
-# A streamlit app for natural disaster data
-Source:  
-* Rosvold, E., and H. Buhaug. 2021. Geocoded Disasters (GDIS) Dataset. Palisades, NY: NASA Socioeconomic Data and Applications Center (SEDAC). https://doi.org/10.7927/zz3b-8y61. Accessed 22 January 2022.
-* Rosvold, E.L., and H. Buhaug. 2021. GDIS, a Global Dataset of Geocoded Disaster Locations. Scientific Data 8:61. https://doi.org/10.1038/s41597-021-00846-6.
+# A streamlit app for analyzing world conflict events
+
+## Data source
+https://ucdp.uu.se/downloads/index.html#ged_global
+* Pettersson, Therese, Shawn Davis, Amber Deniz, Garoun Engström, Nanar Hawach, Stina Högbladh, Margareta Sollenberg & Magnus Öberg (2021). Organized violence 1989-2020, with a special emphasis on Syria. Journal of Peace Research 58(4).
+
+* Sundberg, Ralph and Erik Melander (2013) Introducing the UCDP Georeferenced Event Dataset. Journal of Peace Research 50(4).
 
 This dashboard provides an interactive map for analyzing natural disasters across the world.
 There are also interactive graphs summarizing trends across time and regions.

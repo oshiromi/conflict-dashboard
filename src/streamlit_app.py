@@ -13,17 +13,6 @@ conflict_df = load_conflict_data()
 
 
 with header:
-    st.title('Visualizing conflict')
-
-with body:
-    st.header(f'Map for {country}')
-    st.text('Here there is going to be a map.')
-    df = pd.read_csv(url, compression='zip')
-    st.write(df['location'])
-    with col1:
-        st.write('Hey!')
-    with col2:
-        st.write('No')
     st.title('Conflicts')
 
 with body:

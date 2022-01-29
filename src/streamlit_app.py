@@ -13,19 +13,6 @@ conflict_df = load_conflict_data()
 
 
 with header:
-<<<<<<< HEAD
-    st.title('Visualizing conflict')
-
-with body:
-    st.header(f'Map for {country}')
-    st.text('Here there is going to be a map.')
-    df = pd.read_csv(url, compression='zip')
-    st.write(df['location'])
-    with col1:
-        st.write('Hey!')
-    with col2:
-        st.write('No')
-=======
     st.title('Conflicts')
 
 with body:
@@ -69,4 +56,3 @@ with body:
                              initial_view_state=view,
                              api_keys={'mapbox': mapbox_token}))
                              
->>>>>>> cdef72a433918c85c7155d71498e1a7964541b9e

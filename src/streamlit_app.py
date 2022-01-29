@@ -14,13 +14,13 @@ country = st.sidebar.selectbox(
 )
 
 with header:
-    st.title('Visualizing natural disasters')
+    st.title('Visualizing conflict')
 
 with body:
     st.header(f'Map for {country}')
     st.text('Here there is going to be a map.')
     df = pd.read_csv(url, compression='zip')
-    st.write(df)
+    st.write(df['location'])
     with col1:
         st.write('Hey!')
     with col2:

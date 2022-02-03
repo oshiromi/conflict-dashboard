@@ -47,7 +47,7 @@ with body:
     # st.plotly_chart(fig)
     view = pdk.ViewState(latitude=60, longitude=0, pitch=30, zoom=0)
     layer = pdk.Layer('HexagonLayer',
-                      data=region_df[['longitude', 'latitude', 'best']],
+                      data=region_df[['longitude', 'latitude']],
                       get_position=['latitude', 'longitude'],
                       elevation_scale=50,
                       elevation_range=[0, 2000],
@@ -55,4 +55,9 @@ with body:
     st.pydeck_chart(pdk.Deck(layers=[layer], 
                              initial_view_state=view,
                              api_keys={'mapbox': mapbox_token}))
-                             
+    treemap = px.treemap(conflict_df, 
+                         path=[px.Constant("World"), 'region', 'country', 'year'], values='best',
+                         maxdepth=3,
+                         color_discrete_sequence=px.colors.qualitative.Set2)
+    treemap.update_layout(margin = dict(t=50, l=25, r=25, b=25))
+    st.plotly_chart(treemap)                

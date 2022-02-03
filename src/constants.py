@@ -8,4 +8,4 @@ COLUMNS = ['id', 'year', 'active_year',
     'latitude', 'longitude', 'country',
     'region', 'date_prec', 'date_start', 
     'date_end', 'deaths_a', 'deaths_b', 
-    'deaths_civilians', 'deaths_unknown']
+    'deaths_civilians', 'deaths_unknown', 'best']

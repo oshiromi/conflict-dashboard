@@ -60,4 +60,27 @@ with body:
                          maxdepth=3,
                          color_discrete_sequence=px.colors.qualitative.Set2)
     treemap.update_layout(margin = dict(t=50, l=25, r=25, b=25))
-    st.plotly_chart(treemap)                
+    st.plotly_chart(treemap)  
+    conflict_df = conflict_df.sort_values(by=["year"])
+    conflict_df['type_of_violence'] = conflict_df['type_of_violence'].astype('category', copy=False)
+    px.set_mapbox_access_token(mapbox_token)
+    vtype_scatter = px.scatter_mapbox(conflict_df, 
+                lat='latitude',
+                lon='longitude',
+                zoom=0,
+                animation_frame='year',
+                animation_group='country',
+                color='type_of_violence',
+                size='best',
+                hover_data={
+                    'year': False,
+                    'latitude': False,
+                    'longitude': False,
+                    'side_a': True,
+                    'side_b': True,
+                    'best': True},
+                title='Type of Violence Scatterplot',
+                height=700,
+                width=1000)
+    vtype_scatter.update_layout(legend_title_text='Violence type')
+    st.plotly_chart(vtype_scatter)              

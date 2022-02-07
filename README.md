@@ -1,6 +1,10 @@
-# A streamlit app for analyzing world conflict events
+# A streamlit app for analyzing world conflict events (in progress)
 This dashboard provides an interactive map for analyzing natural disasters across the world.
 There are also interactive graphs summarizing trends across time and regions.
+
+https://share.streamlit.io/oshiromi/conflict-dashboard/main/src/streamlit_app.py
+
+(It might take a while to run)
 
 ## Data source
 https://ucdp.uu.se/downloads/index.html#ged_global
